@@ -1,0 +1,54 @@
+# =======================================================================
+# GITIGNORE OFICIAL ADAPTADO PARA SUITECRM 8 (CONECTAHOGAR BACKEND)
+# =======================================================================
+
+
+# --- Dependencias de Paquetes (PHP y Node/Angular) ---
+/vendor/
+/node_modules/
+/.yarn/
+.pnp.*
+
+# --- Archivos Generados por Compilación / Compilados UI ---
+/.angular/
+/dist/
+/public/dist/
+/.eslintcache
+/.stylelintcache
+
+# --- Caché, Logs y Archivos Temporales del Sistema ---
+/cache/
+/logs/
+/tmp/
+/var/
+/public/legacy/cache/
+/public/legacy/upload/
+/public/legacy/logs/
+
+# --- Archivos de Pruebas y Cobertura (Codeception) ---
+/tests/_output/
+/tests/_support/_generated/
+.phpunit.result.cache
+
+# --- Archivos de Configuración del Sistema Operativo e IDEs ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# --- Archivos de Bloqueo de Modificaciones Locales de SuiteCRM ---
+/public/legacy/config.php
+/public/legacy/config_override.php
+/public/legacy/install.log
+files.md5
+
+# =======================================================================
+# REGLAS DE EXCEPCIÓN (Asegura que ciertas carpetas clave sí se suban)
+# =======================================================================
+!/public/legacy/upload/upgrades/
+!/extensions/
