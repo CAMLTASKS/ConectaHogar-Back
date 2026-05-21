@@ -1,5 +1,5 @@
 <?php
-// created: 2026-05-20 16:16:24
+// created: 2026-05-21 11:43:33
 $mod_strings['LNK_NEW_ACCOUNT'] = 'Crear una cuenta';
 $mod_strings['LNK_ACCOUNT_LIST'] = 'Conjuntos residenciales';
 $mod_strings['LNK_IMPORT_ACCOUNTS'] = 'Importar cuentas';
@@ -26,3 +26,5 @@ $mod_strings['LBL_ACCOUNT_INFORMATION'] = 'Información basica';
 $mod_strings['LBL_BILLING_ADDRESS'] = 'Dirección';
 $mod_strings['LBL_ANNUAL_REVENUE'] = 'Fecha de pago';
 $mod_strings['LBL_WEBSITE'] = 'Sitio web del conjunto';
+$mod_strings['LBL_CONTACTS'] = 'Residentes';
+$mod_strings['LBL_CONTACTS_SUBPANEL_TITLE'] = 'Residentes';

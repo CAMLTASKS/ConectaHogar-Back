@@ -11,6 +11,21 @@ $hook_array['after_save'] = Array();
 $hook_array['after_save'][] = Array(1, 'Update Portal', 'modules/Contacts/updatePortal.php','updatePortal', 'updateUser'); 
 $hook_array['after_save'][] = Array(77, 'updateRelatedMeetingsGeocodeInfo', 'modules/Contacts/ContactsJjwg_MapsLogicHook.php','ContactsJjwg_MapsLogicHook', 'updateRelatedMeetingsGeocodeInfo'); 
 
+$hook_array['before_save'][] = array(
+    1, 
+    'Validaciones ConectaHogar antes de guardar',
+    'custom/modules/Contacts/ContactsConectaHogarHook.php',
+    'ContactsConectaHogarHook',
+    'processBeforeSave'
+);
 
+// 2. Evento AFTER (Para crear el usuario cuando el contacto ya existe físicamente)
+$hook_array['after_save'][] = array(
+    1, 
+    'Creacion de Usuario ConectaHogar despues de guardar',
+    'custom/modules/Contacts/ContactsConectaHogarHook.php',
+    'ContactsConectaHogarHook',
+    'processAfterSave'
+);
 
 ?>
