@@ -417,11 +417,21 @@ array (
         array (
           0 => 
           array (
+            'name' => 'tipo_residente_c',
+            'studio' => 'visible',
+            'label' => 'LBL_TIPO_RESIDENTE',
+          ),
+          1 => '',
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
             'name' => 'full_name',
             'label' => 'LBL_NAME',
           ),
         ),
-        1 => 
+        2 => 
         array (
           0 => 
           array (
@@ -436,7 +446,7 @@ array (
             'label' => 'LBL_BIRTHDATE',
           ),
         ),
-        2 => 
+        3 => 
         array (
           0 => 
           array (
@@ -459,7 +469,7 @@ array (
             ),
           ),
         ),
-        3 => 
+        4 => 
         array (
           0 => 
           array (

@@ -224,6 +224,10 @@ parameters:
       index: false
       list: false
       record: false
+    caml_apartamentos:
+      index: true
+      list: true
+      record: true
     acl-roles:
       index: true
       list: true

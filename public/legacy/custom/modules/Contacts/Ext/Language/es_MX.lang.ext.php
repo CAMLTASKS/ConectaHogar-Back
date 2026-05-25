@@ -2,7 +2,11 @@
 // WARNING: The contents of this file are auto-generated
 
 
-// created: 2026-05-21 15:53:51
+//THIS FILE IS AUTO GENERATED, DO NOT MODIFY
+$mod_strings['LBL_CAML_APARTAMENTOS_CONTACTS_1_FROM_CAML_APARTAMENTOS_TITLE'] = 'Apartamentos';
+
+
+// created: 2026-05-25 18:11:29
 $mod_strings['LBL_ACCOUNT_NAME'] = 'Conjunto';
 $mod_strings['LBL_ACCOUNT_ID'] = 'ID de la cuenta:';
 $mod_strings['LBL_ACCOUNT'] = 'Account';
@@ -28,4 +32,5 @@ $mod_strings['LBL_PANEL_ADVANCED'] = 'Datos de contacto';
 $mod_strings['LBL_PANEL_ASSIGNMENT'] = 'Estado del sistema';
 $mod_strings['LBL_LIST_ACCOUNT_NAME'] = 'Identificación';
 $mod_strings['LBL_EMAIL_ADDRESS'] = 'Correo electrónico:';
+$mod_strings['LBL_CAML_APARTAMENTOS_CONTACTS_1_FROM_CAML_APARTAMENTOS_TITLE'] = 'Apartamentos';
 

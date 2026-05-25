@@ -2,7 +2,11 @@
 // WARNING: The contents of this file are auto-generated
 
 
-// created: 2026-05-21 11:43:33
+//THIS FILE IS AUTO GENERATED, DO NOT MODIFY
+$mod_strings['LBL_ACCOUNTS_CAML_APARTAMENTOS_1_FROM_CAML_APARTAMENTOS_TITLE'] = 'Apartamentos';
+
+
+// created: 2026-05-25 17:59:43
 $mod_strings['LNK_NEW_ACCOUNT'] = 'Crear una cuenta';
 $mod_strings['LNK_ACCOUNT_LIST'] = 'Conjuntos residenciales';
 $mod_strings['LNK_IMPORT_ACCOUNTS'] = 'Importar cuentas';
@@ -31,4 +35,5 @@ $mod_strings['LBL_ANNUAL_REVENUE'] = 'Fecha de pago';
 $mod_strings['LBL_WEBSITE'] = 'Sitio web del conjunto';
 $mod_strings['LBL_CONTACTS'] = 'Residentes';
 $mod_strings['LBL_CONTACTS_SUBPANEL_TITLE'] = 'Residentes';
+$mod_strings['LBL_ACCOUNTS_CAML_APARTAMENTOS_1_FROM_CAML_APARTAMENTOS_TITLE'] = 'Apartamentos';
 
