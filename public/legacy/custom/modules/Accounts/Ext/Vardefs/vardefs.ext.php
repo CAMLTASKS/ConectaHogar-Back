@@ -39,6 +39,13 @@ $dictionary['Account']['fields']['industry']['metadata']=array (
 
  
 
+ // created: 2026-05-26 11:44:47
+$dictionary['Account']['fields']['area_mapa_c']['inline_edit']='1';
+$dictionary['Account']['fields']['area_mapa_c']['labelValue']='Área cercana';
+$dictionary['Account']['fields']['area_mapa_c']['source']='non-db';
+
+ 
+
  // created: 2026-05-20 16:04:51
 $dictionary['Account']['fields']['name']['name']='name';
 $dictionary['Account']['fields']['name']['len']='150';
@@ -52,6 +59,13 @@ $dictionary['Account']['fields']['name']['merge_filter']='disabled';
 $dictionary['Account']['fields']['name']['unified_search']=true;
 $dictionary['Account']['fields']['name']['metadata']=array (
 );
+
+ 
+
+ // created: 2026-05-26 11:48:22
+$dictionary['Account']['fields']['localidad_c']['inline_edit']='1';
+$dictionary['Account']['fields']['localidad_c']['labelValue']='localidad';
+$dictionary['Account']['fields']['localidad_c']['source']='non-db';
 
  
 
@@ -88,6 +102,13 @@ $dictionary['Account']['fields']['jjwg_maps_geocode_status_c']['inline_edit']=1;
 
  
 
+ // created: 2026-05-26 11:42:13
+$dictionary['Account']['fields']['ubicacion_mapa_c']['inline_edit']='1';
+$dictionary['Account']['fields']['ubicacion_mapa_c']['labelValue']='Ubicación conjunto';
+$dictionary['Account']['fields']['ubicacion_mapa_c']['source']='non-db';
+
+ 
+
  // created: 2026-05-20 16:06:17
 $dictionary['Account']['fields']['account_type']['name']='account_type';
 $dictionary['Account']['fields']['account_type']['inline_edit']=true;
@@ -112,8 +133,18 @@ $dictionary['Account']['fields']['billing_address_city']['metadata']=array (
 
  
 
+ // created: 2026-05-26 11:42:13
+$dictionary['Account']['fields']['jjwg_markers_id_c']['inline_edit']=1;
+
+ 
+
  // created: 2026-05-20 11:29:54
 $dictionary['Account']['fields']['jjwg_maps_address_c']['inline_edit']=1;
+
+ 
+
+ // created: 2026-05-26 11:48:22
+$dictionary['Account']['fields']['jjwg_areas_id1_c']['inline_edit']=1;
 
  
 
@@ -144,6 +175,11 @@ $dictionary['Account']['fields']['phone_alternate']['metadata']=array (
 
  // created: 2026-05-20 11:29:54
 $dictionary['Account']['fields']['jjwg_maps_lat_c']['inline_edit']=1;
+
+ 
+
+ // created: 2026-05-26 11:44:46
+$dictionary['Account']['fields']['jjwg_areas_id_c']['inline_edit']=1;
 
  
 ?>

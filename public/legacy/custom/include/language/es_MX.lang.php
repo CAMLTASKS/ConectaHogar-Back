@@ -32,3 +32,10 @@ $app_list_strings['estado_cuenta_list']=array (
   'Inactivo' => 'Inactivo',
   'Bloqueado' => 'Bloqueado',
 );
+$app_list_strings['categoria_caso_list']=array (
+  'queja' => 'Queja',
+  'solicitud' => 'Solicitud',
+  'denuncia' => 'Denuncia',
+  'pagos' => 'Novedad con pagos',
+  'otra' => 'otra',
+);

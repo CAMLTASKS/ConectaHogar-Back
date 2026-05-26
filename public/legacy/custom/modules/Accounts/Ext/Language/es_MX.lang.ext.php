@@ -6,7 +6,7 @@
 $mod_strings['LBL_ACCOUNTS_CAML_APARTAMENTOS_1_FROM_CAML_APARTAMENTOS_TITLE'] = 'Apartamentos';
 
 
-// created: 2026-05-25 17:59:43
+// created: 2026-05-26 11:48:22
 $mod_strings['LNK_NEW_ACCOUNT'] = 'Crear una cuenta';
 $mod_strings['LNK_ACCOUNT_LIST'] = 'Conjuntos residenciales';
 $mod_strings['LNK_IMPORT_ACCOUNTS'] = 'Importar cuentas';
@@ -36,4 +36,10 @@ $mod_strings['LBL_WEBSITE'] = 'Sitio web del conjunto';
 $mod_strings['LBL_CONTACTS'] = 'Residentes';
 $mod_strings['LBL_CONTACTS_SUBPANEL_TITLE'] = 'Residentes';
 $mod_strings['LBL_ACCOUNTS_CAML_APARTAMENTOS_1_FROM_CAML_APARTAMENTOS_TITLE'] = 'Apartamentos';
+$mod_strings['LBL_UBICACION_MAPA_JJWG_MARKERS_ID'] = 'Ubicación conjunto (relacionado  ID)';
+$mod_strings['LBL_UBICACION_MAPA'] = 'Ubicación conjunto';
+$mod_strings['LBL_AREA_MAPA_JJWG_AREAS_ID'] = 'Área cercana (relacionado  ID)';
+$mod_strings['LBL_AREA_MAPA'] = 'Área cercana';
+$mod_strings['LBL_LOCALIDAD_JJWG_AREAS_ID'] = 'localidad (relacionado  ID)';
+$mod_strings['LBL_LOCALIDAD'] = 'localidad';
 

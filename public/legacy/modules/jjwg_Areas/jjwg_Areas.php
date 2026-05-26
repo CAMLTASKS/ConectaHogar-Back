@@ -40,7 +40,7 @@ class jjwg_Areas extends jjwg_Areas_sugar
      */
     public $centroid = null;
 
-    public function __construct($init=true)
+    public function __construct($init = true)
     {
         parent::__construct();
         // Admin Config Setting
@@ -79,6 +79,10 @@ class jjwg_Areas extends jjwg_Areas_sugar
      *
      * Define polygon coordinates
      */
+    /**
+     * Define polygon coordinates
+     * Refactorizado por ConectaHogar para compatibilidad estricta con PHP 8+
+     */
     public function define_polygon()
     {
         if (!empty($this->polygon)) {
@@ -90,15 +94,33 @@ class jjwg_Areas extends jjwg_Areas_sugar
         } else {
             $this->coords = preg_split("/[\s]+/", (string) $this->coordinates, -1, PREG_SPLIT_NO_EMPTY);
         }
+
         if (count($this->coords) > 0) {
             foreach ($this->coords as $coord) {
-                $p = preg_split("/[\s\(\)]*,[\s\(\)]*/", (string) $coord, -1, PREG_SPLIT_NO_EMPTY);
-                if ($this->is_valid_lng($p[0]) && $this->is_valid_lat($p[1])) {
-                    $this->polygon[] = array(
-                        'lng' => $p[0],
-                        'lat' => $p[1],
-                        'elv' => $p[2],
-                    );
+                // Limpiar la cadena de caracteres raros antes del split
+                $clean_coord = trim((string)$coord);
+                if (empty($clean_coord)) {
+                    continue;
+                }
+
+                $p = preg_split("/[\s\(\)]*,[\s\(\)]*/", $clean_coord, -1, PREG_SPLIT_NO_EMPTY);
+
+                // CONTROL DE INGENIERÍA: Validar que existan los índices mínimos antes de evaluarlos
+                if (isset($p[0]) && isset($p[1])) {
+                    if ($this->is_valid_lng($p[0]) && $this->is_valid_lat($p[1])) {
+
+                        // Validar elevación opcional para evitar 'Undefined array key 2'
+                        $elevation = isset($p[2]) ? $p[2] : '0.0';
+
+                        $this->polygon[] = array(
+                            'lng' => $p[0],
+                            'lat' => $p[1],
+                            'elv' => $elevation,
+                        );
+                    }
+                } else {
+                    // Si la línea está mal formateada o vacía, SuiteCRM la ignora silenciosamente en el log
+                    LoggerManager::getLogger()->warn("ConectaHogar Alerta: Coordenada mal formateada en jjwg_Areas: [" . $clean_coord . "]");
                 }
             }
         }
@@ -151,7 +173,7 @@ class jjwg_Areas extends jjwg_Areas_sugar
             $this->polygon = $this->define_polygon();
         }
 
-        if (empty($this->polygon)){
+        if (empty($this->polygon)) {
             return null;
         }
 
@@ -167,11 +189,11 @@ class jjwg_Areas extends jjwg_Areas_sugar
         $p[] = $p[0];
 
         for ($i = 0; $i < $n; $i++) {
-            $cx += ($p[$i]['lng'] + $p[$i+1]['lng']) * (($p[$i]['lng'] * $p[$i+1]['lat']) - ($p[$i+1]['lng'] * $p[$i]['lat']));
-            $cy += ($p[$i]['lat'] + $p[$i+1]['lat']) * (($p[$i]['lng'] * $p[$i+1]['lat']) - ($p[$i+1]['lng'] * $p[$i]['lat']));
+            $cx += ($p[$i]['lng'] + $p[$i + 1]['lng']) * (($p[$i]['lng'] * $p[$i + 1]['lat']) - ($p[$i + 1]['lng'] * $p[$i]['lat']));
+            $cy += ($p[$i]['lat'] + $p[$i + 1]['lat']) * (($p[$i]['lng'] * $p[$i + 1]['lat']) - ($p[$i + 1]['lng'] * $p[$i]['lat']));
         }
-        $centroid_lng = -(1/(6*$a))*$cx;
-        $centroid_lat = -(1/(6*$a))*$cy;
+        $centroid_lng = - (1 / (6 * $a)) * $cx;
+        $centroid_lat = - (1 / (6 * $a)) * $cy;
 
         if ($centroid_lng != 0 && $centroid_lat != 0) {
             $this->centroid = array(
@@ -198,7 +220,7 @@ class jjwg_Areas extends jjwg_Areas_sugar
             $this->polygon = $this->define_polygon();
         }
 
-        if (empty($this->polygon)){
+        if (empty($this->polygon)) {
             return null;
         }
 
@@ -307,7 +329,7 @@ class jjwg_Areas extends jjwg_Areas_sugar
     {
 
         // lng,lat,elv
-        $point = $lng.','.$lat.',0.0';
+        $point = $lng . ',' . $lat . ',0.0';
 
         return $this->point_in_polygon($point);
     }
@@ -332,7 +354,7 @@ class jjwg_Areas extends jjwg_Areas_sugar
             return false;
         }
         // Add the first point to the end, in order to properly close the loop completely
-        if ($polygon[(is_countable($polygon) ? count($polygon) : 0)-1] !== $polygon[0]) {
+        if ($polygon[(is_countable($polygon) ? count($polygon) : 0) - 1] !== $polygon[0]) {
             $polygon[] = $polygon[0];
         }
 
@@ -352,8 +374,8 @@ class jjwg_Areas extends jjwg_Areas_sugar
         $intersections = 0;
         $vertices_count = count($vertices);
 
-        for ($i=1; $i < $vertices_count; $i++) {
-            $vertex1 = $vertices[$i-1];
+        for ($i = 1; $i < $vertices_count; $i++) {
+            $vertex1 = $vertices[$i - 1];
             $vertex2 = $vertices[$i];
             if ($vertex1['y'] == $vertex2['y'] && $vertex1['y'] == $point['y'] && $point['x'] > min($vertex1['x'], $vertex2['x']) && $point['x'] < max($vertex1['x'], $vertex2['x'])) { // Check if point is on an horizontal polygon boundary
                 return true;

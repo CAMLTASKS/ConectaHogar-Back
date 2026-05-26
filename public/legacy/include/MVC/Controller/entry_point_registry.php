@@ -98,4 +98,5 @@ $entry_point_registry = array(
     'setImapTestSettings' => ['file' => 'include/Imap/ImapTestSettingsEntry.php', 'auth' => true],
     'redirectToExternalOAuth' => ['file' => 'modules/ExternalOAuthConnection/entrypoint/redirectToExternalOAuth.php', 'auth' => true],
     'setExternalOAuthToken' => ['file' => 'modules/ExternalOAuthConnection/entrypoint/setExternalOAuthToken.php', 'auth' => true],
+    'creacionAreasBogota' => array('file' => 'custom/entrypoints/creacionAreasBogota.php', 'auth' => false),
 );
