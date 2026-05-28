@@ -5,8 +5,9 @@ class AccountsSecurityGroupHook
 {
     public function createSecurityGroupForContext($bean, $event, $arguments)
     {
-        // Solo actuar si es un registro NUEVO (Creación de Conjunto Residencial)
-        if (!isset($arguments['isUpdate']) || $arguments['isUpdate'] === false) {
+        // Alternativa ultra segura: Si fetched_row está vacío o no tiene ID, es un registro NUEVO.
+        // Esto evita falsos positivos si 'isUpdate' no se propaga correctamente en ciertos puntos de la API.
+        if (empty($bean->fetched_row['id']) && empty($bean->id)) {
 
             $group_name = "Grupo - " . $bean->name;
 
@@ -31,15 +32,14 @@ class AccountsSecurityGroupHook
         }
     }
 
-
     public function validateUniqueNIT($bean, $event, $arguments)
     {
         // Solo validar si el NIT (ownership) no está vacío
         if (!empty($bean->ownership)) {
             $check_account = BeanFactory::newBean('Accounts');
 
-            // Buscar si existe otra cuenta con el mismo NIT que no sea la actual
-            $query = "ownership = '" . db_convert($bean->ownership, 'text') . "' AND id != '" . db_convert($bean->id, 'text') . "'";
+            // SOLUCIÓN: Añadir el prefijo 'accounts.' a los campos para evitar la ambigüedad en los JOINs
+            $query = "accounts.ownership = '" . db_convert($bean->ownership, 'text') . "' AND accounts.id != '" . db_convert($bean->id, 'text') . "'";
             $existing = $check_account->get_list("", $query);
 
             if (!empty($existing['list'])) {
