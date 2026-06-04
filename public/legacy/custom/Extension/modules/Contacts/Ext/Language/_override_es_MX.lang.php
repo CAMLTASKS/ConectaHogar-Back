@@ -1,5 +1,5 @@
 <?php
-// created: 2026-05-25 18:11:29
+// created: 2026-06-03 17:53:47
 $mod_strings['LBL_ACCOUNT_NAME'] = 'Conjunto';
 $mod_strings['LBL_ACCOUNT_ID'] = 'ID de la cuenta:';
 $mod_strings['LBL_ACCOUNT'] = 'Account';
@@ -26,3 +26,6 @@ $mod_strings['LBL_PANEL_ASSIGNMENT'] = 'Estado del sistema';
 $mod_strings['LBL_LIST_ACCOUNT_NAME'] = 'Identificación';
 $mod_strings['LBL_EMAIL_ADDRESS'] = 'Correo electrónico:';
 $mod_strings['LBL_CAML_APARTAMENTOS_CONTACTS_1_FROM_CAML_APARTAMENTOS_TITLE'] = 'Apartamentos';
+$mod_strings['LBL_APARTAMENTO_CAML_APARTAMENTOS_ID'] = 'Apartamento (relacionado  ID)';
+$mod_strings['LBL_APARTAMENTO'] = 'Apartamento';
+$mod_strings['LBL_AOS_INVOICES'] = 'Factura';

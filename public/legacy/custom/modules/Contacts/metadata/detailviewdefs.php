@@ -540,7 +540,12 @@ array (
             'name' => 'account_name',
             'label' => 'LBL_ACCOUNT_NAME',
           ),
-          1 => '',
+          1 => 
+          array (
+            'name' => 'apartamento_c',
+            'studio' => 'visible',
+            'label' => 'LBL_APARTAMENTO',
+          ),
         ),
       ),
     ),

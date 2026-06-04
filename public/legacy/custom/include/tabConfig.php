@@ -1,5 +1,6 @@
-<?php 
-$GLOBALS["tabStructure"] =array (
+<?php
+// created: 2026-06-03 15:00:26
+$GLOBALS['tabStructure'] = array (
   'LBL_TABGROUP_SALES' => 
   array (
     'label' => 'LBL_TABGROUP_SALES',
@@ -8,11 +9,10 @@ $GLOBALS["tabStructure"] =array (
       0 => 'Home',
       1 => 'Accounts',
       2 => 'Contacts',
-      3 => 'Opportunities',
-      4 => 'Leads',
-      5 => 'Contracts',
-      6 => 'Quotes',
-      7 => 'Forecasts',
+      3 => 'caml_apartamentos',
+      4 => 'AOS_Invoices',
+      5 => 'Cases',
+      6 => 'Documents',
     ),
   ),
   'LBL_TABGROUP_MARKETING' => 
@@ -21,12 +21,10 @@ $GLOBALS["tabStructure"] =array (
     'modules' => 
     array (
       0 => 'Home',
-      1 => 'Accounts',
-      2 => 'Contacts',
-      3 => 'Leads',
-      4 => 'Campaigns',
-      5 => 'Prospects',
-      6 => 'ProspectLists',
+      1 => 'jjwg_Markers',
+      2 => 'jjwg_Areas',
+      3 => 'AOS_Products',
+      4 => 'AOS_Product_Categories',
     ),
   ),
   'LBL_TABGROUP_SUPPORT' => 
@@ -35,10 +33,10 @@ $GLOBALS["tabStructure"] =array (
     'modules' => 
     array (
       0 => 'Home',
-      1 => 'Accounts',
-      2 => 'Contacts',
-      3 => 'Cases',
-      4 => 'Bugs',
+      1 => 'caml_tarifa',
+      2 => 'caml_control_accesos',
+      3 => 'caml_vehiculos',
+      4 => 'caml_parqueaderos',
     ),
   ),
   'LBL_TABGROUP_ACTIVITIES' => 
@@ -61,8 +59,8 @@ $GLOBALS["tabStructure"] =array (
     'modules' => 
     array (
       0 => 'Home',
-      1 => 'Emails',
-      2 => 'Documents',
+      1 => 'Campaigns',
+      2 => 'Emails',
       3 => 'Project',
     ),
   ),

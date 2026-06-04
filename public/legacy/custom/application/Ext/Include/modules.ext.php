@@ -3,9 +3,23 @@
 
  
  //WARNING: The contents of this file are auto-generated
+$beanList['caml_anuncios'] = 'caml_anuncios';
+$beanFiles['caml_anuncios'] = 'modules/caml_anuncios/caml_anuncios.php';
+$moduleList[] = 'caml_anuncios';
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
 $beanList['caml_apartamentos'] = 'caml_apartamentos';
 $beanFiles['caml_apartamentos'] = 'modules/caml_apartamentos/caml_apartamentos.php';
 $moduleList[] = 'caml_apartamentos';
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+$beanList['caml_pagos'] = 'caml_pagos';
+$beanFiles['caml_pagos'] = 'modules/caml_pagos/caml_pagos.php';
+$moduleList[] = 'caml_pagos';
 
 
  

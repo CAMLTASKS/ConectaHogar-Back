@@ -33,6 +33,13 @@ $dictionary['Contact']['fields']['tipo_residente_c']['labelValue']='tipo residen
 
  
 
+ // created: 2026-06-03 10:42:48
+$dictionary['Contact']['fields']['apartamento_c']['inline_edit']='1';
+$dictionary['Contact']['fields']['apartamento_c']['labelValue']='Apartamento';
+$dictionary['Contact']['fields']['apartamento_c']['source']='non-db';
+
+ 
+
  // created: 2026-05-21 11:49:39
 $dictionary['Contact']['fields']['phone_home']['name']='phone_home';
 $dictionary['Contact']['fields']['phone_home']['len']='100';
@@ -82,6 +89,11 @@ $dictionary['Contact']['fields']['email1']['merge_filter']='disabled';
 $dictionary['Contact']['fields']['email1']['unified_search']=true;
 $dictionary['Contact']['fields']['email1']['metadata']=array (
 );
+
+ 
+
+ // created: 2026-06-03 10:42:48
+$dictionary['Contact']['fields']['caml_apartamentos_id_c']['inline_edit']=1;
 
  
 

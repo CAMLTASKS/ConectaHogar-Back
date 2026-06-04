@@ -1,0 +1,69 @@
+<?php
+$popupMeta = array (
+    'moduleMain' => 'caml_apartamentos',
+    'varName' => 'caml_apartamentos',
+    'orderBy' => 'caml_apartamentos.name',
+    'whereClauses' => array (
+  'name' => 'caml_apartamentos.name',
+),
+    'searchInputs' => array (
+  0 => 'caml_apartamentos_number',
+  1 => 'name',
+  2 => 'priority',
+  3 => 'status',
+),
+    'listviewdefs' => array (
+  'TIPO' => 
+  array (
+    'type' => 'enum',
+    'studio' => 'visible',
+    'label' => 'LBL_TIPO',
+    'width' => '10%',
+    'default' => true,
+    'name' => 'tipo',
+  ),
+  'ACCOUNTS_CAML_APARTAMENTOS_1_NAME' => 
+  array (
+    'type' => 'relate',
+    'link' => true,
+    'label' => 'LBL_ACCOUNTS_CAML_APARTAMENTOS_1_FROM_ACCOUNTS_TITLE',
+    'id' => 'ACCOUNTS_CAML_APARTAMENTOS_1ACCOUNTS_IDA',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'UNIDAD' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_UNIDAD',
+    'width' => '10%',
+    'default' => true,
+    'link' => true,
+    'name' => 'unidad',
+  ),
+  'BLOQUE' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_BLOQUE',
+    'width' => '10%',
+    'default' => true,
+    'name' => 'bloque',
+  ),
+  'ESTADO_OCUPACION' => 
+  array (
+    'type' => 'enum',
+    'studio' => 'visible',
+    'label' => 'LBL_ESTADO_OCUPACION',
+    'width' => '10%',
+    'default' => true,
+    'name' => 'estado_ocupacion',
+  ),
+  'VALOR_ADMIN' => 
+  array (
+    'type' => 'decimal',
+    'label' => 'LBL_VALOR_ADMIN',
+    'width' => '10%',
+    'default' => true,
+    'name' => 'valor_admin',
+  ),
+),
+);

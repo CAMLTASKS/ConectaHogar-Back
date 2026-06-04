@@ -39,3 +39,15 @@ $app_list_strings['categoria_caso_list']=array (
   'pagos' => 'Novedad con pagos',
   'otra' => 'otra',
 );
+$app_strings['LBL_TABGROUP_SALES'] = 'Conjunto';
+
+$app_strings['LBL_TABGROUP_MARKETING'] = 'Tiendas';
+
+$app_strings['LBL_TABGROUP_SUPPORT'] = 'Parqueadero';
+
+$app_strings['LBL_TABGROUP_ACTIVITIES'] = 'Actividades';
+
+$app_list_strings['moduleList']['AOS_Invoices']='Facturas';
+$app_list_strings['moduleListSingular']['AOS_Invoices']='Factura';
+$app_list_strings['parent_type_display']['AOS_Invoices']='Factura';
+$app_list_strings['record_type_display_notes']['AOS_Invoices']='Factura';

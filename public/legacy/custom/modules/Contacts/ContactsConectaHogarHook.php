@@ -139,7 +139,6 @@ class ContactsConectaHogarHook
     public function processAfterSave($bean, $event, $arguments)
     {
         $GLOBALS['log']->fatal("ConectaHogar Log: >>> INICIANDO AFTER_SAVE <<< para ID: " . $bean->id);
-        $session_user = $this->getCurrentUser();
         $db = DBManagerFactory::getInstance();
 
         if (isset($GLOBALS['conectahogar_processing_contact']) && $GLOBALS['conectahogar_processing_contact'] === true) {
@@ -147,13 +146,18 @@ class ContactsConectaHogarHook
         }
         $GLOBALS['conectahogar_processing_contact'] = true;
 
-        // Recuperar grupos de seguridad del administrador
+        // NUEVA LÓGICA: Recuperar los grupos de seguridad directamente de la Cuenta (Conjunto Residencial) asignada
         $group_ids = array();
-        if (!empty($session_user) && !empty($session_user->id)) {
-            $session_user->load_relationship('SecurityGroups');
-            $group_ids = $session_user->SecurityGroups->get();
+        if (!empty($bean->account_id)) {
+            $account_bean = BeanFactory::getBean('Accounts', $bean->account_id);
+            if (!empty($account_bean) && $account_bean->id) {
+                $account_bean->load_relationship('SecurityGroups');
+                $group_ids = $account_bean->SecurityGroups->get();
+                $GLOBALS['log']->fatal("ConectaHogar Log: Grupos heredados de la Cuenta '" . $account_bean->name . "': " . json_encode($group_ids));
+            }
         }
 
+        // Asignar los grupos de la Cuenta al Contacto
         if (!empty($group_ids)) {
             $bean->load_relationship('SecurityGroups');
             foreach ($group_ids as $group_id) {
@@ -213,6 +217,7 @@ class ContactsConectaHogarHook
             if (!empty($target_user_id)) {
                 $user_relation_bean = BeanFactory::getBean('Users', $target_user_id);
                 
+                // Asignar los grupos de la Cuenta también al registro del Usuario
                 if (!empty($group_ids)) {
                     $user_relation_bean->load_relationship('SecurityGroups');
                     foreach ($group_ids as $group_id) {
@@ -220,11 +225,15 @@ class ContactsConectaHogarHook
                     }
                 }
 
+                // AJUSTE: Buscar y asociar el Rol específico llamado 'Residente'
                 $role_bean = BeanFactory::newBean('ACLRoles');
-                $role_list = $role_bean->get_list("", "acl_roles.name = 'Rol Residente App'");
+                $role_list = $role_bean->get_list("", "acl_roles.name = 'Residente'");
                 if (!empty($role_list['list'])) {
                     $user_relation_bean->load_relationship('aclroles');
                     $user_relation_bean->aclroles->add($role_list['list'][0]->id);
+                    $GLOBALS['log']->fatal("ConectaHogar Log: Rol 'Residente' asignado exitosamente al usuario.");
+                } else {
+                    $GLOBALS['log']->fatal("ConectaHogar Log: ERROR - No se encontró ningún rol de ACL con el nombre 'Residente'.");
                 }
             }
         }
