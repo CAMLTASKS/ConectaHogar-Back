@@ -1236,7 +1236,7 @@ class SearchForm
                                 $tmpfield_value = unformat_number($fv);
 
                                 if ($type == 'currency' && stripos($field, '_usdollar') !== false) {
-                                    // It's a US Dollar field, we need to do some conversions from the user's local currency
+                                    // It's a Pesos Colombianos field, we need to do some conversions from the user's local currency
                                     $currency_id = $GLOBALS['current_user']->getPreference('currency');
                                     if (empty($currency_id)) {
                                         $currency_id = -99;

@@ -254,7 +254,7 @@ class Campaign extends SugarBean
     public function save($check_notify = false)
     {
 
-            //US DOLLAR
+            //Pesos Colombianos
         if (isset($this->amount) && !empty($this->amount)) {
             $currency = BeanFactory::newBean('Currencies');
             $currency->retrieve($this->currency_id);

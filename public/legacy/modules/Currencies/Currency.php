@@ -90,11 +90,11 @@ class Currency extends SugarBean
 
     /**
      * convertToDollar
-     * This method accepts a currency amount and converts it to the US Dollar amount
+     * This method accepts a currency amount and converts it to the Pesos Colombianos amount
      *
-     * @param $amount string|float The currency amount to convert to US Dollars
+     * @param $amount string|float The currency amount to convert to Pesos Colombianoss
      * @param $precision int The rounding precision scale
-     * @return float currency value in US Dollars from conversion
+     * @return float currency value in Pesos Colombianoss from conversion
      */
     public function convertToDollar($amount, $precision = 6)
     {
@@ -105,12 +105,12 @@ class Currency extends SugarBean
 
     /**
      * convertFromCollar
-     * This method accepts a US Dollar amount and returns a currency amount
+     * This method accepts a Pesos Colombianos amount and returns a currency amount
      * with the conversion rate applied to it.
      *
-     * @param $amount string|float The currency amount in US Dollars
+     * @param $amount string|float The currency amount in Pesos Colombianoss
      * @param $precision int The rounding precision scale
-     * @return float currency value from US Dollar conversion
+     * @return float currency value from Pesos Colombianos conversion
      */
     public function convertFromDollar($amount, $precision = 6)
     {
@@ -128,7 +128,7 @@ class Currency extends SugarBean
     public function getDefaultCurrencyName()
     {
         global $sugar_config;
-        return $sugar_config['default_currency_name'] ?? 'US Dollars';
+        return $sugar_config['default_currency_name'] ?? 'Pesos Colombianoss';
     }
 
     /**

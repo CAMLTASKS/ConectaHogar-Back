@@ -158,9 +158,9 @@ class ViewWizard extends SugarView
 
         // 10/13/2006 Collin - Changed to use Localization.getConfigPreference
         // This was the problem- Previously, the "-99" currency id always assumed
-        // to be defaulted to US Dollars.  However, if someone set their install to use
+        // to be defaulted to Pesos Colombianoss.  However, if someone set their install to use
         // Euro or other type of currency then this setting would not apply as the
-        // default because it was being overridden by US Dollars.
+        // default because it was being overridden by Pesos Colombianoss.
         $cur_id = $locale->getPrecedentPreference('currency', $current_user);
         if ($cur_id) {
             $selectCurrency = $currency->getSelectOptions($cur_id);
@@ -267,11 +267,11 @@ eoq;
     }
 
     /**
-     * Function to sort currencies in array alphabetically, except for US Dollar which must remain as first element
+     * Function to sort currencies in array alphabetically, except for Pesos Colombianos which must remain as first element
      * in the array.
      *
      * @param array $currenciesArray Array of currencies to sort
-     * @return array|string Array of sorted currencies with the US Dollar as the first
+     * @return array|string Array of sorted currencies with the Pesos Colombianos as the first
      */
     public function correctCurrenciesSymbolsSort($currenciesArray)
     {

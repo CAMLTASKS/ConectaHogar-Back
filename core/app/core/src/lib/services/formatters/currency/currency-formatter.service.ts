@@ -106,7 +106,7 @@ export class CurrencyFormatter implements Formatter {
 
         return {
             iso4217: 'USD',
-            name: 'US Dollars',
+            name: 'Pesos Colombianoss',
             symbol: '$'
         };
     }

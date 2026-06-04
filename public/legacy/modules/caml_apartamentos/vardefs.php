@@ -140,7 +140,7 @@ $dictionary['caml_apartamentos'] = array(
     'len' => '18',
     'size' => '20',
     'enable_range_search' => false,
-    'precision' => '8',
+    'precision' => '0',
     'metadata' => 
     array (
     ),

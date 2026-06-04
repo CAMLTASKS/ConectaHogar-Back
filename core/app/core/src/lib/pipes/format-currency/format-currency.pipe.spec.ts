@@ -48,7 +48,7 @@ describe('FormatCurrencyPipe', () => {
 
     /* eslint-disable camelcase,@typescript-eslint/camelcase */
     const preferences = new BehaviorSubject<any>({
-        currency: {id: '1', name: 'US Dollar', symbol: '$', iso4217: 'USD'},
+        currency: {id: '1', name: 'Pesos Colombianos', symbol: '$', iso4217: 'USD'},
         default_currency_significant_digits: '2',
         num_grp_sep: ',',
         dec_sep: '.',
@@ -99,7 +99,7 @@ describe('FormatCurrencyPipe', () => {
 
         /* eslint-disable camelcase,@typescript-eslint/camelcase */
         preferences.next({
-            currency: {id: '1', name: 'US Dollar', symbol: '$', iso4217: 'USD'},
+            currency: {id: '1', name: 'Pesos Colombianos', symbol: '$', iso4217: 'USD'},
             default_currency_significant_digits: '2',
             num_grp_sep: '.',
             dec_sep: ',',

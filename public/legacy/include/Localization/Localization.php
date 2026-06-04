@@ -309,7 +309,7 @@ class Localization
                 'symbol'  => '฿'
             ),
             'USD' => array(
-                'name'    => 'US Dollars',
+                'name'    => 'Pesos Colombianoss',
                 'iso4217' => 'USD',
                 'symbol'  => '$'
             ),

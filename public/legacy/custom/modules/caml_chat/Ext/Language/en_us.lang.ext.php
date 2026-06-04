@@ -1,0 +1,12 @@
+<?php
+// WARNING: The contents of this file are auto-generated
+
+
+//THIS FILE IS AUTO GENERATED, DO NOT MODIFY
+$mod_strings['LBL_CAML_CHAT_CAML_MENSAJES_1_FROM_CAML_MENSAJES_TITLE'] = 'Mensajes';
+
+
+//THIS FILE IS AUTO GENERATED, DO NOT MODIFY
+$mod_strings['LBL_CAML_CHAT_CAML_MENSAJES_1_FROM_CAML_MENSAJES_TITLE'] = 'Mensajes';
+$mod_strings['LBL_CAML_APARTAMENTOS_CAML_CHAT_1_FROM_CAML_APARTAMENTOS_TITLE'] = 'Apartamentos';
+

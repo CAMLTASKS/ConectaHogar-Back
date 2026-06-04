@@ -242,7 +242,7 @@ describe('FieldComponent', () => {
                                 value: null,
                                 items: {
                                     id: '-99',
-                                    name: 'US Dollars',
+                                    name: 'Pesos Colombianoss',
                                     symbol: '$',
                                     iso4217: 'USD'
                                 }

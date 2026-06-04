@@ -44,7 +44,7 @@ if (!defined('sugarEntry') || !sugarEntry) {
 
 function perform_save(&$focus)
 {
-    //US DOLLAR
+    //Pesos Colombianos
     if (isset($focus->amount) && !number_empty($focus->amount)) {
         $currency = BeanFactory::newBean('Currencies');
         $currency->retrieve($focus->currency_id);

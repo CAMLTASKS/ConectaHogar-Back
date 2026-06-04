@@ -681,9 +681,9 @@ class UserViewHelper
 
         // 10/13/2006 Collin - Changed to use Localization.getConfigPreference
         // This was the problem- Previously, the "-99" currency id always assumed
-        // to be defaulted to US Dollars.  However, if someone set their install to use
+        // to be defaulted to Pesos Colombianoss.  However, if someone set their install to use
         // Euro or other type of currency then this setting would not apply as the
-        // default because it was being overridden by US Dollars.
+        // default because it was being overridden by Pesos Colombianoss.
         $cur_id = $locale->getPrecedentPreference('currency', $this->bean);
         if ($cur_id) {
             $selectCurrency = $currency->getSelectOptions($cur_id);

@@ -143,24 +143,15 @@ array (
         array (
           0 => 
           array (
-            'name' => 'currency_id',
-            'studio' => 'visible',
-            'label' => 'LBL_CURRENCY',
-          ),
-        ),
-        1 => 
-        array (
-          0 => 
-          array (
             'name' => 'line_items',
             'label' => 'LBL_LINE_ITEMS',
           ),
         ),
-        2 => 
+        1 => 
         array (
           0 => '',
         ),
-        3 => 
+        2 => 
         array (
           0 => 
           array (
@@ -168,7 +159,7 @@ array (
             'label' => 'LBL_TOTAL_AMT',
           ),
         ),
-        4 => 
+        3 => 
         array (
           0 => 
           array (
@@ -176,7 +167,7 @@ array (
             'label' => 'LBL_DISCOUNT_AMOUNT',
           ),
         ),
-        5 => 
+        4 => 
         array (
           0 => 
           array (
@@ -184,7 +175,7 @@ array (
             'label' => 'LBL_SUBTOTAL_AMOUNT',
           ),
         ),
-        6 => 
+        5 => 
         array (
           0 => 
           array (
@@ -199,7 +190,7 @@ array (
             ),
           ),
         ),
-        7 => 
+        6 => 
         array (
           0 => 
           array (
@@ -207,7 +198,7 @@ array (
             'label' => 'LBL_SHIPPING_TAX_AMT',
           ),
         ),
-        8 => 
+        7 => 
         array (
           0 => 
           array (
@@ -215,7 +206,7 @@ array (
             'label' => 'LBL_TAX_AMOUNT',
           ),
         ),
-        9 => 
+        8 => 
         array (
           0 => 
           array (

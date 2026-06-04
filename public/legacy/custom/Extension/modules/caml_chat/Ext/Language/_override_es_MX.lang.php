@@ -1,0 +1,3 @@
+<?php
+// created: 2026-06-04 16:09:13
+$mod_strings['LBL_CAML_APARTAMENTOS_CAML_CHAT_1_FROM_CAML_APARTAMENTOS_TITLE'] = 'Apartamentos';

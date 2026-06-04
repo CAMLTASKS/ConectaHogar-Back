@@ -56,7 +56,7 @@ describe('CurrencyDetailFieldComponent', () => {
     const preferences = new BehaviorSubject({
         num_grp_sep: ',',
         dec_sep: '.',
-        currency: {id: '-99', name: 'US Dollars', symbol: '$', iso4217: 'USD'},
+        currency: {id: '-99', name: 'Pesos Colombianoss', symbol: '$', iso4217: 'USD'},
         default_currency_significant_digits: 2
     });
     const mockStore = new UserPreferenceMockStore(preferences);
@@ -104,7 +104,7 @@ describe('CurrencyDetailFieldComponent', () => {
                                 value: null,
                                 items: {
                                     id: '-99',
-                                    name: 'US Dollars',
+                                    name: 'Pesos Colombianoss',
                                     symbol: '$',
                                     iso4217: 'USD'
                                 }
@@ -145,7 +145,7 @@ describe('CurrencyDetailFieldComponent', () => {
         preferences.next({
             num_grp_sep: ',',
             dec_sep: '.',
-            currency: {id: '-99', name: 'US Dollars', symbol: '$', iso4217: 'USD'},
+            currency: {id: '-99', name: 'Pesos Colombianoss', symbol: '$', iso4217: 'USD'},
             default_currency_significant_digits: 2
         });
         /* eslint-enable camelcase, @typescript-eslint/camelcase */

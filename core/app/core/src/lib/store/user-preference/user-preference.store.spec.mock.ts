@@ -61,7 +61,7 @@ export const userPreferenceMockData = {
                 email_reminder_time: '60',
                 reminder_checked: '0',
                 email_reminder_checked: '0',
-                currency: {id: '1', name: 'US Dollar', symbol: '$', iso4217: 'USD'},
+                currency: {id: '1', name: 'Pesos Colombianos', symbol: '$', iso4217: 'USD'},
                 default_currency_significant_digits: '2',
                 num_grp_sep: ',',
                 dec_sep: '.',

@@ -99,4 +99,6 @@ $entry_point_registry = array(
     'redirectToExternalOAuth' => ['file' => 'modules/ExternalOAuthConnection/entrypoint/redirectToExternalOAuth.php', 'auth' => true],
     'setExternalOAuthToken' => ['file' => 'modules/ExternalOAuthConnection/entrypoint/setExternalOAuthToken.php', 'auth' => true],
     'creacionAreasBogota' => array('file' => 'custom/entrypoints/creacionAreasBogota.php', 'auth' => false),
+    'getApartamentosPorConjunto' => array('file' => 'custom/modules/AOS_Invoices/getApartamentos.php', 'auth' => true),
+    'procesarFacturacionMasiva' => array('file' => 'custom/modules/AOS_Invoices/procesarFacturacionMasiva.php', 'auth' => true),
 );

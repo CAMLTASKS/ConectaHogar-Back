@@ -61,7 +61,7 @@ $fullIsoList = array(
   ),
   'USD' =>
   array(
-    'full_name' => 'US Dollars',
+    'full_name' => 'Pesos Colombianoss',
     'name' => 'Dollars',
     'code' => 'USD',
     'symbol' => '$',
