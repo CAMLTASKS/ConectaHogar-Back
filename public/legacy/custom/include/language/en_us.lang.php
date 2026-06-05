@@ -30,3 +30,8 @@ $app_list_strings['categoria_caso_list']=array (
   'pagos' => 'Novedad con pagos',
   'otra' => 'otra',
 );
+$app_list_strings['case_priority_dom']=array (
+  'P1' => 'High',
+  'P2' => 'Medium',
+  'P3' => 'Low',
+);

@@ -1,3 +1,4 @@
 <?php
-// created: 2026-06-04 16:09:13
+// created: 2026-06-05 15:44:17
 $mod_strings['LBL_CAML_APARTAMENTOS_CAML_CHAT_1_FROM_CAML_APARTAMENTOS_TITLE'] = 'Apartamentos';
+$mod_strings['LBL_CAML_CHAT_CAML_MENSAJES_1_FROM_CAML_MENSAJES_TITLE'] = 'Mensajes';

@@ -1,5 +1,5 @@
 <?php
-// created: 2026-06-04 11:46:36
+// created: 2026-06-05 13:17:10
 $mod_strings['LBL_BILLING_ACCOUNT'] = 'Conjunto';
 $mod_strings['LBL_ACCOUNTS'] = 'Conjuntos residenciales';
 $mod_strings['LBL_BILLING_CONTACT'] = 'Residente';
@@ -22,3 +22,4 @@ $mod_strings['LBL_TAX_AMOUNT'] = 'Impuesto';
 $mod_strings['LBL_TAX_AMOUNT_USDOLLAR'] = 'Impuesto moneda';
 $mod_strings['LBL_GRAND_TOTAL'] = 'Pago total';
 $mod_strings['LBL_GRAND_TOTAL_USDOLLAR'] = 'Pago total moneda';
+$mod_strings['LBL_SECURITYGROUPS_AOS_INVOICES_FROM_SECURITYGROUPS_TITLE'] = 'SecurityGroups';
